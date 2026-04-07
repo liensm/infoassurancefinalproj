@@ -12,10 +12,10 @@ It supports selecting and inputting highlighted text:
 
 ## Files
 - manifest.json
-- popup.html
-- popup.css
-- popup.js
-- content.js
+- extension.html
+- extstyling.css
+- textretriever.js
+- logic.js
 
 ## Manual
 1. Open Extensions page.
