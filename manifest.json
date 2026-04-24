@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Cipher Highlighter",
+  "name": "SecureText",
   "version": "1.0",
   "description": "Encrypt or decrypt highlighted text",
 
@@ -18,10 +18,17 @@
   },
 
   "action": {
-    "default_title": "Cipher Highlighter"
+    "default_title": "SecureText",
+    "default_icon": "icon.png"
   },
 
   "side_panel": {
     "default_path": "extension.html"
+  },
+
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
   }
 }
