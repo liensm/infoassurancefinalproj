@@ -3,19 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cipher Highlighter</title>
+    <title>SecureText</title>
     <link rel="stylesheet" href="extstyling.css" />
+    <link rel="icon" href="icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Main popup card: one input/output field plus controls -->
     <main class="card">
-      <h1>Cipher Highlighter</h1>
+
+      <!--  Theme Toggle -->
+      <button id="themeToggle" title="Toggle Theme">
+        <span id="themeIcon"></span>
+      </button>
+
+      <h1>SecureText</h1>
+      <h4><i>A Cryptography Browser Extension</i></h4>
 
       <label for="ioField">Input / Output</label>
-      <textarea id="ioField" rows="7" placeholder="Paste text or load selected text..."></textarea>
+      <textarea id="ioField" placeholder="Paste text or load selected text..."></textarea>
 
       <div class="row"> <!-- Menu button pang select ng cipher -->
-        <label for="cipher">Cipher</label>
+        <label for="cipher">Select Cipher Method</label>
         <select id="cipher">
           <option value="caesar">Caesar</option>
           <option value="railfence">Rail Fence</option>
@@ -35,9 +44,9 @@
 
       <div class="grid">
         <!-- Actions: load selected page text, transform it, then copy result -->
-        <button id="loadSelection" type="button">Load Highlighted</button>
-        <button id="copyOutput" type="button">Copy Output</button>
-        <button id="encrypt" type="button" class="accent">Encrypt</button>
+        <button id="loadSelection" type="button">Load</button>
+        <button id="copyOutput" type="button">Copy</button>
+        <button id="encrypt" type="button">Encrypt</button>
         <button id="decrypt" type="button">Decrypt</button>
       </div>
 
