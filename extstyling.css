@@ -13,46 +13,71 @@
   box-sizing: border-box;
 }
 
-/* Popup styling and background. */
 body {
   margin: 0;
-  width: 360px;
-  min-height: 460px;
-  font-family: Georgia, "Times New Roman", serif;
+  width: 100%;
+  min-width: 300px;
+  min-height: 100%;
+  font-family: 'Inter', sans-serif;
   color: var(--ink);
   background: radial-gradient(circle at top right, var(--bg-1), var(--bg-2));
 }
 
 .card {
   padding: 14px;
+  position: relative; /* IMPORTANT */
+  width: 100%;
 }
 
 h1 {
+  font-family: 'Playfair Display', serif;
+  margin: 0 0 2px;
+  font-size: 1.4rem;
+   padding-right: 30px; /* prevents overlap with toggle */
+}
+
+h4 {
   margin: 0 0 10px;
-  font-size: 1.3rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 20px;
 }
 
 label {
   display: block;
   margin-bottom: 6px;
-  font-size: 0.92rem;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
+
+#caesar,
+#rail {
+  margin-bottom: 1;
+}
+
+.grid {
+  margin-top: 30px;
+}
+
 
 textarea,
 select,
 input,
 button {
   width: 100%;
-  border: 1px solid var(--border);
+  border: 1px solid #a45318;
+  box-sizing: border-box;
   border-radius: 8px;
-  padding: 8px 10px;
+  padding: 10px 10px;
   font: inherit;
+  font-size: 0.85rem;
 }
 
 textarea {
   resize: vertical;
-  min-height: 140px;
-  margin-bottom: 10px;
+  min-height: 120px;
+  margin-bottom: 25px;
 }
 
 .row {
@@ -66,16 +91,18 @@ textarea {
 }
 
 button {
-  background: #f8f1e8;
+  background: #f7e4cb;
   color: var(--ink);
   cursor: pointer;
+   border-color: #a45318;
+     font-size: 0.85rem;
+  font-weight: 500;
 }
 
-button.accent {
-  background: var(--accent);
-  color: #fff;
-  border-color: #a45318;
+button:hover {
+  background: #f28638;
 }
+
 
 #status {
   min-height: 20px;
@@ -86,4 +113,55 @@ button.accent {
 
 .hidden {
   display: none;
+}
+
+#themeToggle {
+  position: absolute;
+  top: 7px;
+  right: -px;
+  transform: translateX(-9px); /* small inward spacing */
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+
+#themeToggle svg {
+  width: 20px;
+  height: 20px;
+}
+#themeToggle svg {
+  stroke: currentColor;
+  color: inherit;
+}
+
+/* Dark Mode */
+body.dark {
+  background: #121212;
+  color: #eaeaea;
+}
+
+body.dark .card {
+  background: #1a1a1a;
+}
+
+/* Inputs */
+body.dark textarea,
+body.dark select,
+body.dark input {
+  background: #222;
+  color: #eaeaea;
+  border: 1px solid #04c2db;
+}
+
+/* Buttons */
+body.dark button {
+  background: #2c3e41;
+  color: #eaeaea;
+  border: 1px solid #00bcd4;
+}
+
+/* Hover effect (optional but nice) */
+body.dark button:hover {
+  background: #00bcd4;
 }
